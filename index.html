@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message</title>
+
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial;
+  text-align: center;
+}
+
+#text {
+  font-size: 28px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+</style>
+</head>
+
+<body>
+
+<div id="text"></div>
+
+<script>
+let text = document.getElementById("text");
+
+function show(msg, delay) {
+  setTimeout(() => {
+    text.style.opacity = 0;
+
+    setTimeout(() => {
+      text.innerHTML = msg;
+      text.style.opacity = 1;
+    }, 500);
+
+  }, delay);
+}
+
+show("uthiye suar ji kitna sona hai 😴", 1000);
+show("24 din baaki hai beta kabtak soye rehna hai ⏳", 4000);
+show("<h1 style='color:red'>PADH LIJIYE AAB SUAR 🐷🔥</h1>", 7000);
+
+</script>
+
+</body>
+</html>
